@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000
 app.use(cors())
 
 app.use(express.json({ extended: false }))
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "../client", "build")))
 app.use(authRoute)
 
 app.get("*", (req, res) => {
