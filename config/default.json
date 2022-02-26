@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://Abhishek_Kumar:ankur123@cluster0.mm9bv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "JWT_SECRET": "thisisoopsproject"
+}

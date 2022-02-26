@@ -1,0 +1,36 @@
+body {
+    background-color: #030324;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    font-size: 4em;
+    display: flex;
+}
+
+.input-box {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: none;
+    caret-color: transparent;
+}
+
+.exists {
+    background-color: yellow;
+}
+
+.correct {
+    background-color: green;
+}
