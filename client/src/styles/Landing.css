@@ -1,5 +1,7 @@
 body {
     background-color: #030324;
+    background-image: url('dogbg.jpg');
+    background-size: cover;
 }
 
 .container {
@@ -11,7 +13,8 @@ body {
 }
 
 .title {
-    color: white;
+    color: rgb(43, 6, 32);
+    font-family:'Courier New', Courier, monospace;
     font-size: 4em;
     display: flex;
 }
@@ -23,14 +26,31 @@ body {
     font-size: 2em;
     text-align: center;
     text-transform: uppercase;
-    cursor: none;
+    /* cursor: none; */
     caret-color: transparent;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .exists {
     background-color: yellow;
+    color: black;
 }
 
 .correct {
     background-color: green;
+    color: white;
+}
+
+.wordle-instructions {
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    left: 4%;
+    top: 10%;
+    display: flex;
+    justify-content: left;
+    font-size: 2em;
+    padding-top: 20px;
+    color: rgb(26, 05, 17);
 }

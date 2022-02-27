@@ -2,13 +2,15 @@ import React, {useState, useEffect} from 'react'
 import {useHistory} from "react-router-dom"
 import "../styles/Landing.css"
 import axios from 'axios'
+import Sound from 'react-sound'
+import song from "./song.mp3"
 
 const Landing = () => {
     let history = useHistory()
     const [turn, setTurn] = useState(1)
     const [answer, setAnswer] = useState("")
 
-    const lettersCount = 6, nAttmempts = 7;
+    const lettersCount = 6, nAttmempts = 3;
     const submit = async () => {
         let word = ''
                 
@@ -16,6 +18,9 @@ const Landing = () => {
         {
             word = word+document.getElementById(`${+turn+''+i}`).value
         }
+
+        if(word.length!=lettersCount)
+            return
         
         word = word.toLowerCase()
         
@@ -53,9 +58,23 @@ const Landing = () => {
         }
 
         if(word == 'jordan')
-        alert("Yayyyyy")
-        document.getElementById(`${+(turn+1)+''+0}`).focus()
-        setTurn(turn+1)
+        {
+            alert("Yayyyyy hui na baatttt")
+            history.push('/adulipuff-is-perfect')
+        }
+        else  {
+            if(turn==nAttmempts)
+            {
+                alert("Dobara try karo, apna adu ka anumaan lagao")
+                window.location.reload(false    )
+            }
+                
+            else
+            {
+                document.getElementById(`${+(turn+1)+''+0}`).focus()
+                setTurn(turn+1)
+            }
+        }
     }
 
 
@@ -123,10 +142,10 @@ const Landing = () => {
 
     useEffect( async () => {
         document.getElementById("10").focus()
-        let wIdx = Math.floor(Math.random() * 1000) + 1;
+        // let wIdx = Math.floor(Math.random() * 1000) + 1;
 
-        let url = "http://localhost:5000/api/getWord/"+wIdx
-        let {data} = await axios({url})
+        // let url = "/api/getWord/"+wIdx
+        // let {data} = await axios({url})
         
         setAnswer("jordan")
     },[])
@@ -135,13 +154,23 @@ const Landing = () => {
     return (
         <div className = "container">
             <div className='title'>
-                SHABD
+                HAPPY 21
             </div>
+
+            {/* <Sound
+                url = {song}
+                playStatus = {Sound.status.PLAYING}
+                volume = {20}
+            /> */}
 
             <div>
                 {printWords}
                 {/* <input typ
                 e="text" id = "L1" className='input-box' index = "1" onChange={checkLength}/> */}
+            </div>
+
+            <div className='wordle-instructions'>
+                Chalo aao wordle kare aaj ka, but since adulipuff wordle me kuch zyada hi pro hai, you get only 3 attempts
             </div>
         </div>
     )
