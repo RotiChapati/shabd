@@ -40,7 +40,7 @@ const Collage = () => {
     return (
         <div className = "container-2">
             <div className='title'>
-                HAPPY 21
+                PUPPY 21
             </div>
 
             <div className='next-question'>
@@ -64,7 +64,7 @@ const Collage = () => {
                     
                 {
                     (written==secret)?
-                        <button className='msgBox submit'>
+                        <button className='msgBox submit' onClick={()=>window.location.href = 'https://rotichapati.github.io/bdayCard/'}>
                             Click to proceed
                         </button>:""
                 }

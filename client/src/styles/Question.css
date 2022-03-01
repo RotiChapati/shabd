@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.fullpage {
+	width: 75vw;
+	height: 100vh;
+	background-color: black;
+	padding-left: 25%;
+}
+
+.page {
+	width: 50%;
+	height: 80%;
+	background-color: white;
+	color: black;
+	padding: 50px;
+}
+
+.chapter1 {
+	font-size: 5em;
+	font-weight: bold;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 0.9;
+	margin-bottom: 100px;
+}
+
+.para {
+	font-size: 1.5em;
+	font-weight: 300;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin-bottom: 40px;
+}

@@ -13,7 +13,7 @@
 .next-question {
     position: absolute;
     width: 30%;
-    height: 30%;
+    height: 50%;
     right: 0%;
     bottom: 5%;
     display: flex;
